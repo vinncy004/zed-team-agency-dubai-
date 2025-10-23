@@ -1,0 +1,360 @@
+@media  screen and (width<=440px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-image: url(img/Screenshot\ 2025-10-18\ 132048.png);
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        color: black;
+        margin-left: 1px;
+        font-family: sans-serif;
+    }
+    #header{
+        margin-top: 0;
+        height: 30px;
+        width: 100vw;
+        background-color: white;
+
+    }
+    #header-ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 30vw 40px;
+        justify-content: space-between;
+    }
+    #icon{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+   
+    #nav-bar{
+        position: absolute;
+        top: 0;
+        display:none ;
+        width: 73vw;
+        height:100vh ;
+        background-color:rgb(7, 7, 48);
+        color: white;
+        font-size: large;
+        z-index: 1;
+
+    }
+    #close{
+        position: absolute;
+        top: 0;
+        margin-left: 66vw;
+        cursor: pointer;
+    }
+    #nav-bar a{
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+    }
+    
+    #nav-bar ul li{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 20vw;
+        justify-content: baseline;
+        justify-items:center;
+        
+       
+    }
+    #description-header{
+        margin-top: 30vh;
+        overflow-x: auto;
+    }
+    #description-header h1{
+        font-size: 40px;
+        text-transform: uppercase;
+        color: rgb(5, 3, 1);
+        font-family: fantasy;
+    }
+     #description-header h5{
+        font-size: 20px;
+     }
+     #getstarted,#getstarted1{
+        width: 40vw;
+        height: 30px;
+        border-radius: 5px;
+        color: azure;
+        background-color: rgb(228, 103, 54);
+        margin-left: 25vw;
+        font-size: 20px;
+        &:hover{
+            background-color: brown;
+            transition: 0.5s ease-in;
+        }
+}
+
+ #getstarted a{
+        text-decoration: none;
+        font-size: 20px;
+ }
+#heads{
+    color: rgb(32, 29, 29);
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#req{
+    margin-top: 17vh;
+}
+#req ul li{
+    display: block;
+    list-style-type: none;
+    gap:20px;
+    font-size: 25px;
+}
+
+#email{
+    width: 90vw;
+    height: 30px;
+}
+#text-content{
+    width: 90vw;
+    height: fit-content;
+}
+#send{width: 90vw;
+    height: 30px;}
+#footer{
+    background-color: rgb(130, 130, 204);
+}
+#footer ul li{
+   display: inline-block;
+   list-style-type:none;
+   margin-right: 15vw;
+}
+/*styling for signup and login pages*/
+ form{
+    margin-top: 10vh;
+    width: 98vw;
+    margin-left: 5px;
+ }
+ input{
+    margin-left: 5px;
+    width: 90vw;
+    height: 30px;
+ }
+ #registerbtn{
+     width: 90vw;
+    height: 30px;
+    background-color: rgb(223, 65, 25);
+    color: azure;
+    margin-left: 5px;
+ }
+#alink{
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+ }
+ legend{
+    font-size: 20px;
+   
+ }
+ #tc{
+    width:20px;
+    height: 20px;
+ }
+ #card{
+    width: 100vw;
+    height: 20vh;
+    border: 2px solid hsla(0, 79%, 45%, 0.8);
+    border-radius: 5px;
+ }
+ #cardimage{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    
+ }
+}
+@media  screen and (width>=440px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-image: url(img/Screenshot\ 2025-10-18\ 132048.png);
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        color: black;
+        margin-left: 1px;
+    }
+    #header{
+       display: none;
+        margin-top: 0;
+        height: 30px;
+        width: 100vw;
+        background-color: white;
+
+    }
+    #header-ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 30vw 40px;
+        justify-content: space-between;
+    }
+    #icon{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    #nav-bar{
+      
+       
+        width: 100vw;
+        height: 30px;
+        background-color:rgb(60, 60, 207);
+        color: white;
+        font-size: large;
+       
+
+    }
+    #name1{
+        margin-left: 10vw;
+    }
+    #close{
+        display: none;
+        position: absolute;
+        top: 0;
+        margin-left: 66vw;
+    }
+    #nav-bar a{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+          &:hover{
+            color: black;
+        }
+      
+    }
+    #nav-bar ul{
+       
+    }
+    #nav-bar ul li{
+        list-style-type:none;
+        display: inline-block;
+        margin-right: 10px;
+          &:hover{
+            background-color: white;
+        }
+        
+       
+    }
+  
+    #description-header{
+        margin-top: 30vh;
+        overflow-x: auto;
+       
+    }
+    #description-header h1{
+        font-size: 40px;
+        text-transform: uppercase;
+        color: rgb(5, 3, 1);
+        font-family: fantasy;
+    }
+     #description-header h5{
+        font-size: 20px;
+     }
+     #getstarted{
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        color: azure;
+        background-color: rgb(228, 103, 54);
+        margin-left:3px;
+        font-size: 20px;
+        &:hover{
+            background-color: brown;
+            transition: 0.5s ease-in;
+        }
+}
+  #getstarted1{
+        width: 38vw;
+        height: 40px;
+        border-radius: 5px;
+        color: azure;
+        background-color: rgb(228, 103, 54);
+        margin-left:30vw;
+        font-size: 20px;
+        &:hover{
+            background-color: brown;
+            transition: 0.5s ease-in;
+        }
+}
+
+ #getstarted,#getstarted1 a{
+        text-decoration: none;
+        font-size: 20px;
+ }
+#heads{
+    color: rgb(32, 29, 29);
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#req{
+    margin-top: 17vh;
+}
+#req ul li{
+    display: block;
+    list-style-type: none;
+    gap:20px;
+    font-size: 25px;
+}
+
+#email{
+    width: 90vw;
+    height: 30px;
+}
+#text-content{
+    width: 90vw;
+    height: fit-content;
+}
+#send{width: 90vw;
+    height: 30px;}
+#footer{
+    background-color: rgb(130, 130, 204);
+   
+}
+#footer ul{
+   display: inline-block;
+}
+/*styling for signup and login pages*/
+ form{
+    margin-top: 10vh;
+    width: 98vw;
+    margin-left: 5px;
+ }
+ input{
+    margin-left: 5px;
+    width: 90vw;
+    height: 30px;
+ }
+ #registerbtn{
+     width: 90vw;
+    height: 30px;
+    background-color: rgb(223, 65, 25);
+    color: azure;
+    margin-left: 5px;
+ }
+#alink{
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+ }
+ legend{
+    font-size: 20px;
+   
+ }
+ #tc{
+    width:20px;
+    height: 20px;
+ }
+}
+
