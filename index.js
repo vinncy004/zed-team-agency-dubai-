@@ -12,5 +12,55 @@
     const year=new Date().getFullYear();
     document.getElementById('year').textContent=`${year}`;
 
+const testimonials = document.querySelectorAll('.testimonial');
+let index = 0;
+
+function showNextTestimonial() {
+  testimonials[index].classList.remove('active');
+  index = (index + 1) % testimonials.length;
+  testimonials[index].classList.add('active');
+}
+
+setInterval(showNextTestimonial, 3000); // change every 4 seconds
+/*
+ const notis=document.getElementById('notification');
+ const notisimg=document.getElementById('notify-img');
+ const error=document.getElementById('notify');
+ const msg=document.getElementById('noti-message');
+ 
+
+ const closebtn=document.getElementById('close-notis');
+ closebtn.addEventListener('click',()=>{
+  notis.style.display="none";
+ });
+ //account button index.html
+document.getElementById('login').addEventListener('click',()=>{
+  notis.style.display="";
+  notisimg.innerHTML='<img src="img/bg.png'alt="image"/>;
+  error.innerHTML="<h3>ERROR</h3>"
+  msg.innerHTML="<p>sorry feature coming soon</p>"
+
+});
+
+ //form val;idation
+ const phone=document.getElementById('phone').value;
+ const email=document.getElementById('email').value;
+ const pass1=document.getElementById('pass1').value;
+ const pass2=document.getElementById('phone').value;
+ const valid=document.getElementById('validphone').value;
+ pass2.addEventListener('input',()=>{
+ if(pass1===pass2){
+  document.getElementById('pass-success').innerHTML="<p>success</p>";
+ }else{
+   document.getElementById('pass-success').textContent="<p>no match</P>";
+ }
+});
+*/
+
+
+ 
+ 
+
+
 
  
