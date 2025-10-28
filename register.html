@@ -4,41 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+       body{
+        background-color: white;
+        color: black;
+       } /*styling for signup and login pages*/
+ form{
+    margin-top: 10vh;
+    width: 98vw;
+    margin-left: 5px;
+ }
+ input{
+    margin-left: 5px;
+    width: 90vw;
+    height: 30px;
+ }
+ #registerbtn{
+     width: 90vw;
+    height: 30px;
+    background-color: rgb(223, 65, 25);
+    color: azure;
+    margin-left: 5px;
+ }
+#alink{
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+ }
+ legend{
+    font-size: 20px;
+   
+ }
+ #tc{
+    width:20px;
+    height: 20px;
+ }
+ #notify-img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    #notification{
+        display:none ;
+        width: 80vw;
+        height: 20vh;
+        margin-top: 40vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: rgb(241, 239, 239);
+        border: 1px solid rgb(94, 97, 97);
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        z-index: 2;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+        
+    }
+    #close-notis{
+        width: 50px;
+        height: 20px;
+        border-radius: 3px;
+        color: rgb(7, 5, 5);
+        background-color: rgb(66, 66, 158);
+    }
+    #noti-message{
+        color: black;
+        font-size: 25px;
+    }
+    </style>
 </head>
 <body>
+    <script src="index.js"></script>
     <form action="" method="get">
         <fieldset>
             <legend>
-                register zed
+                register zed team
             </legend>
             <br>
-            <label for="names">enter full names:</label>
-            <br><br>
-            <input type="text" name="number" id="name" placeholder="full names (e.g john doe)">
-            <br><br>
+             <div id="notification">
+      <span id="notify-img">img</span>
+      <br>
+       <h3 id="notify">hey user</h3>
+       <br>
+       <p id="noti-message">hey user</p>
+       <br>
+       <button id="close-notis">OK</button>
+    </div>
             <label for="phone">enter phone number:</label>
             <br>            <br>
-            <input type="number" name="number" id="phone" placeholder="phonenumber">
+            <input type="number" name="number" id="phone" placeholder="phonenumber" required>
             <br>
              <span id="validphone"></span>
             <br>
             <label for="email">enter email :</label>
             <br><br>
-            <input type="email"  id="email" placeholder="enter email e.g (abc@gmail.com)">
+            <input type="email"  id="email" placeholder="enter email e.g (abc@gmail.com)"  required>
             <br><br>
              <br><br>
             <label for="passwpord">enter password:</label>
             <br><br>
-            <input type="password"  id="pass1" placeholder="enter strong password">
+            <input type="password"  id="pass1" placeholder="enter strong password"  required>
             <br><br>
             <br><br>
             <label for="passwpord">repeat password:</label>
             <br><br>
-            <input type="password"  id="pass2" placeholder="repeat password">
-            <br><br>
+            <input type="password"  id="pass2" placeholder="repeat password"  required>
+            <br>
+            <span id="pass-success"></span><br>
 
-            <button id="registerbtn"><a href="#"  onclick="notify()" id="alink">register</a></button>
+            <button id="registerbtn"><a href="register1.html"   id="alink">register</a></button>
             <br><br>
         </fieldset>
     </form>
