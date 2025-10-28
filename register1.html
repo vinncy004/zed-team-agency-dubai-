@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+       body{
+        background-color: white;
+        color: black;
+       } /*styling for signup and login pages*/
+ form{
+    margin-top: 10vh;
+    width: 98vw;
+    margin-left: 5px;
+ }
+ input{
+    margin-left: 5px;
+    width: 90vw;
+    height: 30px;
+ }
+ #registerbtn{
+     width: 90vw;
+    height: 30px;
+    background-color: rgb(223, 65, 25);
+    color: azure;
+    margin-left: 5px;
+ }
+#alink{
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+ }
+ legend{
+    font-size: 20px;
+   
+ }
+ #tc{
+    width:20px;
+    height: 20px;
+ }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>
+                personal details
+            </legend>
+            <br>
+            <label for="names">enter full names:</label>
+            <br><br>
+            <input type="text" name="number" id="name" placeholder="full names (e.g john doe)">
+            <br><br>
+            <label for="phone">enter phone number:</label>
+            <br><br>
+            <input type="number" name="number" id="phone" placeholder="phonenumber">
+            <br>
+             <span id="validphone"></span>
+            <br>
+            <label for="phone">enter phone number of next of kin :</label>
+            <br><br>
+           <input type="number" name="number" id="phone" placeholder="phonenumber">
+            <br><br>
+            <label for="phone">your county :</label>
+            <br><br>
+          <input type="text" name="" id="county">
+            
+            <br><br>
+            <label for="phone">your sub-county :</label>
+            <br><br>
+          <input type="text" name="" id="county">
+            <br><br>
+            <label for="health">upload health check picture(front)-optional</label>
+            <br><br>
+            <input type="file" name="file" id="upload" placeholder="upload file pdf,img">
+
+            <button id="registerbtn"><a href="register3.html"   id="alink">step 3</a></button>
+            <br><br>
+        </fieldset>
+    </form>
+</body>
+</html>
