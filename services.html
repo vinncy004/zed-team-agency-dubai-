@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZEDTEAM AGENCY</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
 
 </head>
 <body>
       <div id="header">
        
             <ul id="header-ul">
-                <li>welcome <span id="username">guest</span></li>
-                <li>zed-tm agency</li>
                 <li id="menubar"><img src="img/menu.png" alt="" id="icon"></li>
+                <li>welcome<span id="username"> guest</span></li>
+                <li><button id="login">profile</button></li>
             </ul>
       
     </div>
@@ -52,42 +52,60 @@
         
 
     </ul>
+    <br><br>
+    <a href="register1.html"><button id="getstarted">JOIN TEAM</button></a>
+    <br><br>
    </div>
-   <br>
-   <div id="tetimonials">
-    <h2>What they say about us</h2>
-   <div id="card">
-    <img id="card-image" src="img/password.png" alt="">
-    <p>username</p>
-    <p>hello world</p>
+   <br><br>
+    <section class="testimonial-container">
+    <div class="testimonial active">
+      <h4>what they say about us:</h4>
+      <br>
+      <span ><img src="" alt="image" id="profile"></span><br>
+      <p>"This product changed my life! Highly recommend."</p>
+      <h3>- Alex Kebati</h3>
+    </div>
+    <div class="testimonial">
+      <h4>what they say about us:</h4>
+      <br>
+      <span ><img src="" alt="image" id="profile"></span><br>
+      <p>"Excellent customer service and great quality!"</p>
+      <h3>-Boaz O</h3>
+    </div>
+    <div class="testimonial">
+      <h4>what they say about us:</h4>
+      <br>
+      <span ><img src="img/account.png.png" alt="" id="profile"></span><br>
+      <p>"Affordable and reliable — can't ask for more."</p>
+      <h3>- Sarah K Lee</h3>
+    </div>
+  </section>
+ 
 
-   </div>
-   </div>
-   <br><br><br>
-   <div id="footer">
-   <center> &copy;<span id="year"></span> ZED-TM AGENCY all rights reserved</center>
+
+   
+ <div id="footer">
+   
    <h4>follow us on</h4>
     <ul>
          
-        <li> <a href=""><img src="" alt="" srcset=""></a></li>
-        <li> <a href=""><img src="" alt="" srcset=""></a></li>
-        <li> <a href=""><img src="" alt="" srcset=""></a></li>
-        <li> <a href=""><img src="" alt="" srcset=""></a></li>
+        <li> <a href="fb"><img id="icon"src="data:image/png;base64,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" alt="" srcset=""></a></li>
+        <li> <a href="ig"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="" srcset=""></a></li>
+        <li> <a href="x"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/5968/5968830.png" alt="" srcset=""></a></li>
+        <li> <a href="ln"><img id="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEUAd7f///8AbLIAc7UAcLRxn8qwzOLb6fP6/P0AbrO90+ZIjsKZu9kAdba2zeOiwNwAaLDx9vqArNHm7/YRfLoAZa+KstRQksQwgLvP3exsoszG2emSttawxt9Ghr5jmchWjsJT5yLzAAAEeklEQVR4nO2c24KqOgyGewhKy0EOclBnwPd/yoXLcUQhtW5mSPfe/edibgA/SknSNITxL5W6jvaMTPum0OWNhV3/5XUrIEnooJIEVFvkY6hNBXQ8d6ksvUPVihrnJlXfoOqMmuWu6uMKlQpqkrFUeoHKHRqni7J8gCqcmON3qYKzsqWmeFZbMu3UjLpIaeba02MMahYRmvF5yYbtnYNihC74vyUJAiQokO48Y8ii+lPrNP1ohHADC9r6O+ri+a4DeixZxXekv1ifQG3RoNvyZ+U9LRV0+YSJ8zCgdEmymWMaqCh9kihnmQaqvaRiAo0wcb5lRO+gbFAmThYSVtMXbyQaK5p0JiZ+JBkq9WmEOlCsEZPkYIQiiemTFrMHV4U9gVVIutAIxQMKqLOZicQouAnl4uNjTk705GSEKjsKk652RigS48lkZIQi8siZ2SGTMDEZGJh2VBGxNAR5LdVCSzLUVDV0QTr0CFVNuZxR/TwTbb4dmpnF6JE6Ewls88R0ODuwL6FYOkpwHCJBtuQbKxFtEJ+25fa0C87KCaSLEgkiyzKhHEqaeXklIIZ5CYOGySmW5SglTCVfH/L4owko0R7j9HDYDjocdHzcL0g1iz5On7UL1PhyEE0PSePuTi5FV+iJE83TovtnJg+KWY+8Gdl0xGnnzRe4VM1pPh/IS909j7qFZINECaNYeI/94nWjVfTG9cfp/LYfRdcOp++hkgEWc13CQCl3L1aPeazenFri2RnftP2+PxwqkgxaY5j/dYNv5k8XQkGEPNpH5e9RLYOyZBqo2neolkFhr8BU5TuxxxKosDMv+x+k14LCzp3VGyuRRY/vLYX25VHrQfHUOvBfESrsbKfVilA8ta3/WRMqtE0ErAnFY0uqVaFOli/gqlChZRJ1VSjbHPi6UNru/fsZqHwT9H0fFK98oWVR4E9AHfpKyGT4g6yqjfsFoV0E8wNQsRy96aI1jpbdpFoMFQbV4wIwM+0Y7Kz832KoaR4SDPutn1bmcynUpppcUs4Wqlx1sjJUC6HyuWQ7es3hqlZ1gQuh4rk5krTo8XZ75cug8vnSE3xW5VaOZhkUEiHBB3YCP/8+FLJ1KrFtDM4bG0O1CGp2mjNjwcPvQ52waiZAofpff3yfmH3GNzet9soXQdWYfRboNuLx16HQ28bNp1X509L8FHJV1ClbbZb/n6BiF6FQk26147r245v14B7KQ3koD+WhPJSH8lAeykN5KA/loTyUh/JQHspDeagXQksq7x9iGaCw7QM85/lhk/PEi09Ho4BsapRo7Rj+kZddxxSYvyk9qkWG4+whYYDfNSCzYmdZgpMdU/2stMjGd6SazeQQnXaGH0jEcXqG1vYND0DJZz13lpAwOUS+KFSGuVOoG1b8u+Xe1yd7FxsYRS62eiqYW23WLhKalc41VmpLNxut8bxya6r/bUnHN04N1bV53+D7HWrfV12aL14bQjrzBsJ3Q8hLIY8D34MOSNU1uLk1GS32grZJWAJi/9hk9BIx6oK0HWs0asf6B1nCVE6ttwwGAAAAAElFTkSuQmCC" alt="" srcset=""></a></li>
     </ul>
-    <h4>quick links</h4>
-    <ul>
-        
-        <li>services</li>
-        <li>about us</li>
-        <li>terms and conditions</li>
-        
-    </ul>
-          <h4>reach us on</h4>
+         <h4>reach us on</h4>
     <ul>
   
-        <li>phone</li>
-        <li>whatsaap</li>
+      <li><a href="https://wa.me/0778895568/message?='hello zed team'"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/3536/3536445.png" alt="whatsaap"></a></li>
+      <li><a href="+254778895568"></a><img id="icon" src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/phone-512.png" alt="phone"></li>
     </ul>
+    <ul>
+        <li><a href="">terms & conditions</a></li>
+        <li><a href="">privacy policy</a></li>
+       
+    </ul>
+    <center>copyright &copy;<span id="year"></span> zed team agency all rights reserved</center>
    </div>
 <script src="index.js" type="text/javascript"></script>
 </body>
