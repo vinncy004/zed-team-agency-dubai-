@@ -54,7 +54,7 @@
     }
     #header ul {
         display: flex;
-        gap: 350px;
+        gap: 320px;
     }
     .icon{
         width: 35px;
