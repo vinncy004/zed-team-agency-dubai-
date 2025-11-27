@@ -58,13 +58,13 @@
             <br><br>
             <label for="phone">enter phone number:</label>
             <br><br>
-            <input type="number" name="number" id="phone" placeholder="phonenumber">
+            <input type="number" name="number" id="phone" placeholder="phonenumber" required>
             <br>
              <span id="validphone"></span>
             <br>
             <label for="phone">enter phone number of next of kin :</label>
             <br><br>
-           <input type="number" name="number" id="phone" placeholder="phonenumber">
+           <input type="number" name="number" id="phone" placeholder="phonenumber" required>
             <br><br>
             <label for="phone">your county :</label>
             <br><br>
@@ -79,9 +79,29 @@
             <br><br>
             <input type="file" name="file" id="upload" placeholder="upload file pdf,img">
 
-            <button id="registerbtn"><a href="register3.html"   id="alink">step 3</a></button>
-            <br><br>
+            
+            <br>
+            <span id="login">
+                <button onclick="valid()" id="registerbtn">next</button>
+            </span><br>
         </fieldset>
     </form>
+    <script>
+        function valid(){
+    let a=document.getElementById('name').value;
+    let b=document.getElementById('phone').value;
+     let d=document.getElementById('login');
+    let c=document.getElementById('registerbtn')
+    //<button id="registerbtn"><a href="register3.html"   id="alink">next </a></button>
+  if((a&&b)!=''){
+    
+    d.innerHTML=`<button onclick="valid()" id="registerbtn"><a href="register3.html"   id="alink">next </a></button>`
+    alert("information recorded,proceed for memberhip");
+  }else{
+      alert("check empty fields to proceed");
+       d.innerHTML=`<button onclick="valid() id='registerbtn'">next</button>`
+  }
+        }
+    </script>
 </body>
 </html>
