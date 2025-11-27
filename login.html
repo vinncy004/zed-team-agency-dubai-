@@ -4,7 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+       body{
+        background-color: white;
+        color: black;
+       } /*styling for signup and login pages*/
+ form{
+    margin-top: 10vh;
+    width: 98vw;
+    margin-left: 5px;
+ }
+ input{
+    margin-left: 2px;
+    width: 90vw;
+    height: 30px;
+ }
+ #registerbtn{
+     width: 90vw;
+    height: 30px;
+    background-color: rgb(223, 65, 25);
+    color: azure;
+    margin-left: 5px;
+ }
+#alink{
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+ }
+ legend{
+    font-size: 20px;
+   
+ }
+ #tc{
+    width:20px;
+    height: 20px;
+ }
+ #notify-img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    #notification{
+        display:none ;
+        width: 80vw;
+        height: 20vh;
+        margin-top: 40vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: rgb(241, 239, 239);
+        border: 1px solid rgb(94, 97, 97);
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        z-index: 2;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+        
+    }
+    #close-notis{
+        width: 50px;
+        height: 20px;
+        border-radius: 3px;
+        color: rgb(7, 5, 5);
+        background-color: rgb(66, 66, 158);
+    }
+    #noti-message{
+        color: black;
+        font-size: 25px;
+    }
+    </style>
+    
 </head>
 <body>
     <form action="" method="get">
@@ -15,17 +89,44 @@
              <br><br>
             <label for="email">enter email:</label>
             <br><br>
-            <input type="email"  id="email" placeholder="enter email registered">
+            <input type="email"  id="email" placeholder="enter email registered" >
             <br><br>
             <label for="passwpord">enter password:</label>
             <br><br>
             <input type="password"  id="pass1" placeholder="enter password">
             <br><br>
-            <button id="registerbtn"><a href="index.html"  onclick="alert('not registered to our system')" id="alink">login</a></button>
+          <span id="login">
+            <button id="registerbtn" onclick="valid()">login</button>
+          </span>
             <br><br>
-            <h4><span><input type="checkbox" name="tc" id="tc" checked></span> by signing in means you accept to our <a href="#" style="color: azure;">T&C</a></h4>
+            <h4><span><input type="checkbox" name="tc" id="tc" checked></span> by signing  means you accept to our <a href="term.html"  style="color: blue;">T&C</a></h4>
             <br>
         </fieldset>
     </form>
+    <script>
+  function valid(){
+      let a=document.getElementById('email').value;
+    let b=document.getElementById('pass1').value;
+     let d=document.getElementById('login');
+    let c=document.getElementById('registerbtn')
+    
+       if(a===''||b===''){
+        alert('empty fields')
+        d.innerHTML=`<button id="registerbtn"><a href="login.html" id="alink">login</a></button>
+        
+        `
+    }else{
+        
+         d.innerHTML=`<button id="registerbtn"><a href="register3.html" id="alink">login</a></button>
+        `
+    }
+    
+   
+    
+   
+     //
+  }
+
+    </script>
 </body>
 </html>
