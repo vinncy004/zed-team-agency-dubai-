@@ -98,7 +98,7 @@
     </div>
             <label for="phone">enter phone number:</label>
             <br>            <br>
-            <input type="number" name="number" id="phone" placeholder="phonenumber" required>
+            <input type="number" name="number" id="phone" placeholder="phonenumber" maxlength="10" minlength="10" required>
             <br>
              <span id="validphone"></span>
             <br>
@@ -118,9 +118,27 @@
             <br>
             <span id="pass-success"></span><br>
 
-            <button id="registerbtn"><a href="register1.html"   id="alink">register</a></button>
+            <span id="reg">
+                <button id="registerbtn" onclick="valid()">register</button> 
+            </span>
             <br><br>
         </fieldset>
     </form>
+    <script>
+      function valid(){
+          let a= document.getElementById('pass1').value;
+          let b=  document.getElementById('pass2').value;
+          let c=  document.getElementById('pass-success');
+           let d=  document.getElementById('reg');
+          if(a!=b){
+            c.innerHTML=`<p  style="color:red;">passwords do  not match</p>`
+            
+          }else if((a===b)&&(a&&b!='') ){
+            c.innerHTML=`<p style="color:green;">success</p>`
+            d.innerHTML=`<button id="registerbtn"><a href="register1.html" id="alink">regiter</a></button>`
+            
+          }
+      }    
+      </script>
 </body>
 </html>
