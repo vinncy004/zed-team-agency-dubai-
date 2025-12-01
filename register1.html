@@ -43,9 +43,28 @@
     width:20px;
     height: 20px;
  }
+ #notify{
+    position:absolute;
+    top: 0;
+    height: 40px;
+    background-color:rgba(11, 97, 54, 0.699);
+    color: rgb(255, 255, 255);
+    width: 90vw;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    display:none ;
+    font-size: 20px;
+    font-weight: bolder;
+
+ }
     </style>
 </head>
 <body>
+     <span id="notify">
+                
+            </span>
     <form action="" method="get">
         <fieldset>
             <legend>
@@ -78,11 +97,11 @@
             <label for="health">upload health check picture(front)-optional</label>
             <br><br>
             <input type="file" name="file" id="upload" placeholder="upload file pdf,img">
-
+           
             
             <br>
             <span id="login">
-                <button onclick="valid()" id="registerbtn">next</button>
+                <button onclick="valid()" id="registerbtn">proceed</button>
             </span><br>
         </fieldset>
     </form>
@@ -92,14 +111,21 @@
     let b=document.getElementById('phone').value;
      let d=document.getElementById('login');
     let c=document.getElementById('registerbtn')
+    let e=document.getElementById('notify');
+    let f=document.getElementById('notis');
+    
     //<button id="registerbtn"><a href="register3.html"   id="alink">next </a></button>
   if((a&&b)!=''){
-    
-    d.innerHTML=`<button onclick="valid()" id="registerbtn"><a href="register3.html"   id="alink">next </a></button>`
-    alert("information recorded,proceed for memberhip");
-  }else{
-      alert("check empty fields to proceed");
-       d.innerHTML=`<button onclick="valid() id='registerbtn'">next</button>`
+    e.style.display='flex';
+      e.innerHTML=`<center><p>information recorded,proceed for memberhip</p></center>`
+    d.innerHTML=`<button  id="registerbtn" onclick="valid()" ><a href="register3.html"   id="alink">proceed </a></button>`
+   
+  }else {
+      e.style.display='flex';
+      e.style.backgroundColor="red";
+     e.innerHTML=`<center><p>empty fields cant be submitted</p></center>`
+      f.innerText="check on empty fields"
+       d.innerHTML=`<button onclick="valid()" id='registerbtn'>proceed</button>`
   }
         }
     </script>
