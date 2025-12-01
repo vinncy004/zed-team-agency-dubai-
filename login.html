@@ -77,14 +77,33 @@
         color: black;
         font-size: 25px;
     }
+     #notify{
+    position:absolute;
+    top: 0;
+    height: 40px;
+    background-color:rgba(11, 97, 54, 0.699);
+    color: rgb(255, 255, 255);
+    width: 90vw;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    display:none ;
+    font-size: 20px;
+    font-weight: bolder;
+
+ }
     </style>
     
 </head>
 <body>
+     <span id="notify">
+                
+            </span>
     <form action="" method="get">
         <fieldset>
             <legend>
-                login zed
+                login 
             </legend>
              <br><br>
             <label for="email">enter email:</label>
@@ -96,7 +115,7 @@
             <input type="password"  id="pass1" placeholder="enter password">
             <br><br>
           <span id="login">
-            <button id="registerbtn" onclick="valid()">login</button>
+            <button id="registerbtn" onclick="valid()" type="submit">login</button>
           </span>
             <br><br>
             <h4><span><input type="checkbox" name="tc" id="tc" checked></span> by signing  means you accept to our <a href="term.html"  style="color: blue;">T&C</a></h4>
@@ -109,15 +128,21 @@
     let b=document.getElementById('pass1').value;
      let d=document.getElementById('login');
     let c=document.getElementById('registerbtn')
+     let e=document.getElementById('notify');
     
        if(a===''||b===''){
-        alert('empty fields')
-        d.innerHTML=`<button id="registerbtn"><a href="login.html" id="alink">login</a></button>
+       e.style.display='flex';
+      e.style.backgroundColor="red";
+     e.innerHTML=`<center><p>empty fields cant be submitted</p></center>`
+        d.innerHTML=`<button id="registerbtn" onclick="valid()"><a href="login.html" id="alink">login</a></button>
         
         `
     }else{
+    e.style.display='flex';
+      e.style.backgroundColor="green";
+     e.innerHTML=`<center>welcome zed team agency-logged successfully</p></center>`
         
-         d.innerHTML=`<button id="registerbtn"><a href="register3.html" id="alink">login</a></button>
+         d.innerHTML=`<button id="registerbtn" ><a href="register3.html" id="alink">login</a></button>
         `
     }
     
