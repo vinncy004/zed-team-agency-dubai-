@@ -77,9 +77,26 @@
         color: black;
         font-size: 25px;
     }
+     #pass-success{
+    position:absolute;
+    top: 0;
+    height: 40px;
+    background-color:rgba(255, 255, 255, 0.699);
+    color: rgb(29, 25, 25);
+    width: 90vw;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    display:none ;
+    font-size: 20px;
+    font-weight: bolder;
+
+ }
     </style>
 </head>
 <body>
+    <span id="pass-success"></span>
     <script src="index.js"></script>
     <form action="" method="get">
         <fieldset>
@@ -119,7 +136,7 @@
             <span id="pass-success"></span><br>
 
             <span id="reg">
-                <button id="registerbtn" onclick="valid()">register</button> 
+                <button type="submit" id="registerbtn" onclick="valid()">register</button> 
             </span>
             <br><br>
         </fieldset>
@@ -131,13 +148,18 @@
           let c=  document.getElementById('pass-success');
            let d=  document.getElementById('reg');
           if(a!=b){
-            c.innerHTML=`<p  style="color:red;">passwords do  not match</p>`
+            c.style.display='inline';
+            c.style.backgroundColor="red";
+            c.innerHTML=`<p  style="color:white;">passwords do  not match</p>`
             
           }else if((a===b)&&(a&&b!='') ){
-            c.innerHTML=`<p style="color:green;">success</p>`
+             c.style.display='inline'
+              c.style.backgroundColor="green"
+            c.innerHTML=`<p style="color:white;">success</p>`
             d.innerHTML=`<button id="registerbtn"><a href="register1.html" id="alink">register</a></button>`
             
           }else if(a===''||b==''){
+             c.style.display='inline'
              c.innerHTML=`<p style="color:blue;">strong password includes special char</p>`
           }
       }    
