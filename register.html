@@ -135,8 +135,10 @@
             
           }else if((a===b)&&(a&&b!='') ){
             c.innerHTML=`<p style="color:green;">success</p>`
-            d.innerHTML=`<button id="registerbtn"><a href="register1.html" id="alink">regiter</a></button>`
+            d.innerHTML=`<button id="registerbtn"><a href="register1.html" id="alink">register</a></button>`
             
+          }else if(a===''||b==''){
+             c.innerHTML=`<p style="color:blue;">strong password includes special char</p>`
           }
       }    
       </script>
