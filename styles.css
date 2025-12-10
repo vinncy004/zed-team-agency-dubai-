@@ -168,6 +168,8 @@
 }
 #req{
     margin-top: 30vh;
+   
+    
 }
 #req ul li{
     display: block;
@@ -186,9 +188,10 @@
 }
 #send{width: 90vw;
     height: 30px;
-    background-color: rgb(122, 131, 128);
+    background-color:transparent;
     color:black;
     font-size: 25px;
+   
 }
 #footer{
     background-color: rgb(130, 130, 204);
