@@ -20,8 +20,14 @@
  }
  input{
     margin-left: 5px;
-    width: 90vw;
+    width: 80vw;
+    text-align: center;
+    justify-content: center;
     height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
  }
  #registerbtn{
      width: 90vw;
@@ -56,10 +62,10 @@ background-color: brown;
    width: 90%;
    margin-left: 5%;
    margin-right: 5%;
-   height: 50vh;
+   height: 60vh;
    font-size: 24px;
-   background-color: rgb(4, 4, 32);
-   color: white;
+   background-color: rgb(250, 250, 255);
+   color: rgb(0, 0, 0);
 }
 #reg{
    width: 45vw;
@@ -84,6 +90,24 @@ background-color: brown;
 #btn ul{
    display: flex;
 }
+   button.copy-btn {
+      padding:8px 12px;
+      border-radius:8px;
+      border:1px solid #ccc;
+      background:3#a9ffca;
+      color: black;
+      cursor:pointer;
+      font-size:0.95rem;
+    }
+    button.copy-btn:active { transform: translateY(1px); }
+    .feedback {
+      margin-left:8px;
+      font-size:0.9rem;
+      color: #09dd41;
+      opacity: 0;
+      transition: opacity 220ms;
+    }
+    .feedback.show { opacity: 1; }
     </style>
 </head>
 <body>
@@ -102,13 +126,27 @@ background-color: brown;
    
    <br>
    <div id="show">
-      <h4>send money ksh.3,000 to agent Edith</h4>
+      <h4>send money ksh.3,500 to agent Edith</h4>
       <br>
-      <h3>contact: 0113233302  </h3>
-      <br>
+      <div class="phone-row" aria-live="polite">
+    <!-- Displayed phone number (change it) -->
+    <div class="phone" id="phoneNumber">0113233302</div>
+
+    <!-- Copy button -->
+    <button class="copy-btn" id="copyBtn" aria-label="Copy phone number to clipboard" title="Copy phone number">
+      Copy
+    </button>
+
+    <!-- Feedback text -->
+    <div class="feedback" id="feedback" role="status" aria-hidden="true">Copied!</div>
+  </div>
       <p><a href="term.html">terms&conditions</a>  </p>
       <br>
-      <center><a href="index.html"><button id="guest">log as guest</button></a></center>
+      <label for="phone">enter phone number to pay with</label>
+      <br>
+      <input type="number" name="" id="phone" maxlength="10" placeholder="enter phone number to pay with">
+      <br>
+      <center><a href="#"><button id="payBtn" >click to pay</button></a></center>
 
    </div>
    <br>
@@ -122,6 +160,105 @@ background-color: brown;
           let b=document.getElementById('show')
         b.style.display="grid"
     })
+    function payment(){
+
+    }
+     (function () {
+      const copyBtn = document.getElementById('copyBtn');
+      const phoneEl = document.getElementById('phoneNumber');
+      const feedback = document.getElementById('feedback');
+
+      function showFeedback(text = 'Copied!', ms = 1500) {
+        feedback.textContent = text;
+        feedback.setAttribute('aria-hidden', 'false');
+        feedback.classList.add('show');
+        clearTimeout(showFeedback._t);
+        showFeedback._t = setTimeout(() => {
+          feedback.classList.remove('show');
+          feedback.setAttribute('aria-hidden', 'true');
+        }, ms);
+      }
+
+      async function copyTextToClipboard(text) {
+        // Prefer modern API
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (err) {
+            // fall through to execCommand fallback
+          }
+        }
+
+        // Fallback (older browsers)
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          // Make it out of viewport & readonly to prevent mobile keyboard
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'absolute';
+          textarea.style.left = '-9999px';
+          document.body.appendChild(textarea);
+          const selection = document.getSelection();
+          const prevRange = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+
+          textarea.select();
+          textarea.setSelectionRange(0, textarea.value.length); // for mobile
+
+          const success = document.execCommand('copy');
+          document.body.removeChild(textarea);
+
+          // Restore previous selection
+          if (prevRange) {
+            selection.removeAllRanges();
+            selection.addRange(prevRange);
+          }
+          return success;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      copyBtn.addEventListener('click', async function () {
+        const phone = phoneEl.textContent.trim();
+        if (!phone) {
+          showFeedback('Nothing to copy', 1200);
+          return;
+        }
+
+        const ok = await copyTextToClipboard(phone);
+        if (ok) {
+          showFeedback('Copied!', 1600);
+          // optional: move focus back to button for accessibility
+          copyBtn.focus();
+        } else {
+          showFeedback('Copy failed — select & copy manually', 2200);
+        }
+      });
+
+      // Allow copying by keyboard when pressing Enter/Space on the button (button already handles it,
+      // but keep this comment to remind about accessibility).
+    })();
+     function processPayment() {
+    const btn = document.getElementById("payBtn");
+
+    // Disable button & show loading text
+    btn.disabled = true;
+    btn.innerText = "Processing...";
+
+    // Wait 4 seconds
+    setTimeout(() => {
+      // Restore button
+      btn.disabled = false;
+      btn.innerText = "Pay Now";
+
+      // Show alert
+      alert("Failed! proceed to send money to the phone: 0113233302 within 15 minutes.");
+    }, 5000); // 4000 ms = 4 seconds
+  }
+
+  // Attach function to button click
+  document.getElementById("payBtn").onclick = processPayment;
      
    </script>
 </body>
