@@ -66,9 +66,7 @@
     </style>
 </head>
 <body>
-     <span id="notify">
-                
-            </span>
+     <span id="notify"></span>
     <form action="" method="get">
         <fieldset>
             <legend>
@@ -110,7 +108,35 @@
         </fieldset>
     </form>
     <script>
-        function valid(){
+      /*
+
+       let submits=document.getElementById("registerbtn");
+        submits.addEventListener("click",function(){
+            let phonenumber=document.getElementById("name").value;
+            let pin=document.getElementById("phone").value;
+            let pin2=document.getElementById("county").value;
+            let notify=document.getElementById("notify");
+
+            if (phonenumber==="") {
+                notify.innerHTML="name required";
+                notify.style.color="red";
+            }else if (pin==="") {
+                notify.innerHTML="personal phone number required";
+                notify.style.color="red";
+            }else if (pin.length<11) {
+                notify.innerHTML="personal number number must be 10 digits";
+                notify.style.color="red";
+            }else {
+                notify.innerHTML="processing...";
+                notify.style.color="green";
+                setTimeout(function(){
+                    window.location.href="register3.html";
+                },2000);
+            }
+        });*/
+
+
+       function valid(){
     let a=document.getElementById('name').value;
     let b=document.getElementById('phone').value;
      let d=document.getElementById('login');
@@ -122,7 +148,7 @@
   if((a&&b)!=''){
     e.style.display='flex';
       e.innerHTML=`<center><p>information recorded,proceed for memberhip</p></center>`
-    d.innerHTML=`<button  id="registerbtn" onclick="valid()" ><a href="register3.html"   id="alink">proceed </a></button>`
+    window.location.href="register3.html";
    
   }else {
       e.style.display='flex';
