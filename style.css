@@ -6,7 +6,7 @@
     body{
         background-image: url(https://i.pinimg.com/564x/6a/09/e9/6a09e938fee868eca515b3652f9a4a9b.jpg);
         background-repeat: no-repeat;
-        background-size: 100vw 100vh;
+        background-size: 110vw 100vh;
         color: black;
         text-align: center;
       
@@ -54,7 +54,20 @@
     }
     #header ul {
         display: flex;
-        gap: 250px;
+       justify-content: space-between;
+       list-style-type: none;
+    }
+    #loginbtn{
+        width:70px;
+        height: 30px;
+        padding: 2px;
+        border-radius: 25px;
+        background-color: transparent;
+        color: black;
+        &:hover{
+            background-color: brown;
+            color: black;
+        }
     }
     .icon{
         width: 35px;
@@ -88,11 +101,11 @@
         position: absolute;
         top: 0;
         display:none ;
-        width: 73vw;
-        height:100vh ;
+        width: 75vw;
+        height:99vh ;
         background-color:rgb(7, 7, 48);
         color: white;
-        font-size: large;
+        font-size: 20px;
         z-index: 1;
 
     }
@@ -123,24 +136,24 @@
         overflow-x: auto;
     }
     #description-header h1{
-        font-size: 40px;
+        font-size: 35px;
         text-transform: uppercase;
         color: rgb(255, 254, 254);
         font-family: arial ,san-serif;
     }
      #description-header h5{
-        font-size: 20px;
+        font-size: 15px;
      }
      #getstarted,#getstarted1{
         width: 40vw;
         height: 30px;
-        border-radius: 5px;
-        color: azure;
-        background-color: rgb(228, 103, 54);
-        margin-left: 20vw;
+        border-radius: 25px;
+        color:white;
+        background-color:rgb(47, 82, 255);
+        margin-left: 15vw;
         font-size: 20px;
         &:hover{
-            background-color: brown;
+            background-color: rgb(244, 72, 72);
             transition: 0.5s ease-in;
         }
 }
@@ -150,27 +163,47 @@
         font-size: 20px;
  }
 #heads{
-    color: rgb(32, 29, 29);
-    text-decoration: underline;
+    color: rgb(20, 5, 73);
+    text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #req{
     margin-top: 30vh;
-   background-color: rgb(89, 127, 161);
-   border: 1px solid blue;
-   box-shadow: cyan;
-
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px  red;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-align: left;
 }
 #req ul li{
     display: block;
-    list-style-type:none;
+    list-style-type: none;
     gap:20px;
-    font-size: 25px;
+    font-size: 22px;
+    margin-left: 5px;
+    text-transform:lowercase;
+
+}
+#contact,#term{
+    margin-top: 10vh;
+    background-color: rgb(200, 200, 200);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(112, 112, 112);
+    box-shadow: 1px 2px 1px red;
 }
 
-#email{
+#email,#email1{
     width: 90vw;
     height: 30px;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
 }
 #text-content{
     width: 90vw;
@@ -181,9 +214,11 @@
     background-color: rgb(122, 131, 128);
     color:black;
     font-size: 25px;
+    border-radius: 25px;
 }
 #footer{
     background-color: rgb(130, 130, 204);
+    margin-top: 10vh;
 }
 #footer ul li{
    display: inline-block;
@@ -205,7 +240,7 @@
         margin-left: 1px;
     }
     #header{
-       display: none;
+        display: none;
         margin-top: 0;
         height: 30px;
         width: 100vw;
@@ -216,11 +251,11 @@
         color: rgb(91, 35, 243);
     }
     #header-ul{
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-rows: 30vw 40px;
+        display: flex;
         justify-content: space-between;
+        width: 100vw;
+        height: 40px;
+        list-style-type: none;
     }
     #icon{
         width: 25px;
@@ -256,9 +291,10 @@
         }
       
     }
-    #nav-bar ul{
-       
+    #logo{
+        margin-right: 70vw;
     }
+   
     #nav-bar ul li{
         list-style-type:none;
         display: inline-block;
@@ -287,7 +323,7 @@
      #getstarted{
         width: 100px;
         height: 30px;
-        border-radius: 5px;
+        border-radius: 25px;
         color: azure;
         background-color: rgb(228, 103, 54);
         margin-left:3px;
@@ -300,7 +336,7 @@
   #getstarted1{
         width: 38vw;
         height: 40px;
-        border-radius: 5px;
+        border-radius: 25px;
         color: azure;
         background-color: rgb(228, 103, 54);
         margin-left:30vw;
@@ -315,37 +351,72 @@
         text-decoration: none;
         font-size: 20px;
  }
+ #copy{
+    display: none;
+ }
 #heads{
-    color: rgb(32, 29, 29);
-    text-decoration: underline;
+    color: rgb(11, 12, 54);
+    text-decoration: none
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #req{
-    margin-top: 30vh;
+    margin-top: 40vh;
+    border: 1px solid rgb(76, 76, 83);
+    border-radius: 5px;
+    box-shadow: 1px 2px 1px  red;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-align: left;
 }
 #req ul li{
     display: block;
     list-style-type: none;
     gap:20px;
-    font-size: 25px;
+    font-size: 22px;
+    margin-left: 5px;
+    text-transform: lowercase;
+
+}
+#contact{
+    margin-top: 10vh;
+    background-color: rgb(200, 200, 200);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(112, 112, 112);
+    box-shadow: 1px 2px 1px red;
 }
 
-#email{
+#email,#email1{
     width: 90vw;
     height: 30px;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
 }
 #text-content{
     width: 90vw;
     height: fit-content;
 }
 #send{width: 90vw;
-    height: 30px;}
+    height: 30px;
+border-radius: 25px;
+}
 #footer{
     background-color: rgb(130, 130, 204);
+    margin-top: 20vh;
    
 }
 #footer ul{
-   display: inline-block;
+   display: flex;
+   justify-content: space-between;
+}
+#footer ul li{
+    list-style-type: none;
+
 }
 /*styling for signup and login pages*/
  form{
