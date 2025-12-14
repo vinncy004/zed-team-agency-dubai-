@@ -11,6 +11,7 @@
     })
     const year=new Date().getFullYear();
     document.getElementById('year').textContent=`${year}`;
+     document.getElementById('years').textContent=`${year}`;
 
 const testimonials = document.querySelectorAll('.testimonial');
 let index = 0;
