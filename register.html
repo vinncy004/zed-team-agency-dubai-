@@ -152,19 +152,28 @@
           let c=  document.getElementById('pass-success');
            let d=  document.getElementById('reg');
           if(a!=b){
-            c.style.display='inline';
-            c.style.backgroundColor="red";
-            c.innerHTML=`<p  style="color:white;">passwords do  not match</p>`
-            
+          
+           
+                c.style.display='inline';
+                c.style.backgroundColor="red";
+                c.innerHTML=`<p  style="color:white;">passwords do  not match</p>` 
+        
           }else if((a===b)&&(a&&b!='') ){
-             c.style.display='inline'
-              c.style.backgroundColor="green"
-            c.innerHTML=`<p style="color:white;">success</p>`
+
+            
+            c.style.display='inline'
+            c.style.backgroundColor="green"
+            c.innerHTML=`<p style="color:white;">success proceed to register</p>`
             d.innerHTML=`<button id="registerbtn"><a href="register1.html" id="alink">register</a></button>`
             
+          
+             
           }else if(a===''||b==''){
-             c.style.display='inline'
-             c.innerHTML=`<p style="color:blue;">strong password includes special char</p>`
+            
+                 c.style.display='inline'
+                  c.style.backgroundColor="yellow"
+                 c.innerHTML=`<p style="color:blue; backgroundColor:yellow">strong password includes special char</p>`
+            
           }
       }    
       </script>
