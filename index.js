@@ -21,7 +21,29 @@ function showNextTestimonial() {
   testimonials[index].classList.add('active');
 }
 
-setInterval(showNextTestimonial, 3000); // change every 4 seconds
+setInterval(showNextTestimonial, 3000); 
+//
+     const sendbtn=document.getElementById('send');
+            const notis=document.getElementById('notify');
+            const email=document.getElementById('email');
+            const name1=document.getElementById('email1');
+            const message=document.getElementById('text-content');
+
+            sendbtn.addEventListener('click',function(){
+                if(email.value ==='' || name1.value ==='' || message.value ===''){
+                    notis.style.color='red';
+                    notis.innerHTML='please fill in all fields';
+                }else{
+                    notis.style.color='green';
+                    notis.innerHTML='message sent successfully';
+                    email.value='';
+                    name1.value='';
+                    message.value='';
+                }
+            });
+
+
+// change every 4 seconds
 /*
  const notis=document.getElementById('notification');
  const notisimg=document.getElementById('notify-img');
