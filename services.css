@@ -17,13 +17,13 @@
     }
   
     #header{
-        width: 100%;
+        width: 100vw;
         height: 40px;
-        background-color: white;
+        background-color: rgb(188, 208, 228);
     }
     #header ul{
         display: flex;
-        gap: 250px;
+       justify-content: space-between;
 
     }
     .icon{
@@ -31,6 +31,7 @@
         height: 35px;
         border-radius: 50%;
     }
+
     #icon{
         width: 35px;
         height: 35px;
@@ -106,11 +107,15 @@
 #footer{
     margin-top: 10vh;
     background-color: rgb(142, 142, 226);
+    width: 100vw;
+    height: fit-content;
+
 }
-#footer ul li{
-   display: inline-block;
+#footer ul{
+   display: flex;
    list-style-type:none;
-   margin-right: 15vw;
+   justify-content: space-between;
+  
 }
 #profile{
     width: 50px;
@@ -147,7 +152,93 @@
   transform: translateY(0);
   position: relative;
 }
+#account{
+    background-color: white;
+    color: black;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 0ch 4px 6px orangered;
+   width: 90vw;
+   height: 40vh;
+   margin-left: 5vw;
+   margin-top: 10vh;
+   text-align: center;
+   margin-bottom: 10vh;
+   
 }
+#account input{
+width:80vw;
+height: 40px;
+padding: 5px;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 2px solid black;
+cursor: pointer;
+
+}
+#jobs,#services{
+    margin-top: 10vh;
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px  red;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+#submits{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 25px;
+    width: 50vw;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    &:hover{
+        background-color: rgb(215, 53, 53);
+    }
+
+}
+#getmembership{
+    border: 1px solid black;
+    box-shadow: 1px 2px 1px rgba(158, 35, 35, 0.803);
+    width: 90vw;
+    height: 30vh;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    border-radius: 5px;
+    text-align: left;
+   
+}
+#accounts{
+    background-color: white;
+    color: black;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 0ch 4px 6px orangered;
+   width: fit-content;
+   height: fit-content;
+   margin-left: 1vw;
+   margin-top: 10vh;
+   font-size: 10px;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    width: 10vw;
+}
+
+
+
+}
+
 
 @media(width>768px) {
     *{
@@ -155,10 +246,9 @@
         margin: 0;
     }
     body{
-        background-image: url(https://i.pinimg.com/564x/6a/09/e9/6a09e938fee868eca515b3652f9a4a9b.jpg);
-        background-repeat: no-repeat;
+       background-color: white
         background-size: 100vw 100vh;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         margin-left: 1px;
     }
    
@@ -222,22 +312,23 @@
         font-size: 20px;
      }
      #getstarted{
-        width: 100px;
+        width: 50vw;
         height: 30px;
-        border-radius: 5px;
+        border-radius: 25px;
         color: azure;
-        background-color: rgb(228, 103, 54);
+        background-color:transparent;
+        color: red;
         margin-left:3px;
         font-size: 20px;
         &:hover{
-            background-color: brown;
+            background-color: rgb(185, 171, 171);
             transition: 0.5s ease-in;
         }
 }
   #getstarted1{
-        width: 38vw;
+        width: 40vw;
         height: 40px;
-        border-radius: 5px;
+        border-radius: 25px;
         color: azure;
         background-color: rgb(228, 103, 54);
         margin-left:30vw;
@@ -291,10 +382,97 @@
 }
 #footer{
     background-color: rgb(130, 130, 204);
+    margin-top: 20vh;
    
 }
 #footer ul{
-   display: inline-block;
+   display: flex;
+   justify-content: space-between;
+}
+#footer li{
+    list-style-type: none;
+
+}
+
+#icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#account{
+    background-color: white;
+    color: black;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 0ch 4px 6px orangered;
+   width: 90vw;
+   height: 40vh;
+   margin-left: 5vw;
+   margin-top: 10vh;
+}
+#accounts{
+    background-color: white;
+    color: black;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 0ch 4px 6px orangered;
+   width: 98vw;
+   height: fit-content;
+   margin-left: 1vw;
+   margin-top: 10vh;
+   font-size: 10px;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;}
+    #account input{
+width:80vw;
+height: 40px;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 2px solid black;
+cursor: pointer;
+}
+#submits{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 25px;
+    width: 50vw;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    &:hover{
+        background-color: rgb(215, 53, 53);
+    }
+
+}
+#getmembership{
+    border: 1px solid black;
+    box-shadow: 1px 2px 1px rgba(158, 35, 35, 0.803);
+    width: 90vw;
+    height: 30vh;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    border-radius: 5px;
+    text-align: left;
+   
+}
+#jobs,#services{
+    margin-top: 10vh;
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px  red;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-align: left;
 }
 
 
