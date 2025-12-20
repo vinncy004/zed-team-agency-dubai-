@@ -10,6 +10,8 @@
         color: rgb(0, 0, 0);
         margin-left: 1px;
         font-family: sans-serif;
+        width: 100vw;
+        overflow-x:scroll;
     }
     h2{
         color: rgb(4, 4, 95);
@@ -227,12 +229,17 @@ cursor: pointer;
    margin-top: 10vh;
    font-size: 10px;
 }
-table, th, td{
+ table, th,td{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
     text-align: center;
-    width: 10vw;
+    
+}
+table{
+    width: 99vw;
+    height: fit-content;
+    overflow-x: scroll;
 }
 
 
