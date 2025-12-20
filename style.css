@@ -12,6 +12,9 @@
       
 
     }
+    #btnt{
+        display: none;
+    }
     #notify-img{
         width: 20px;
         height: 20px;
@@ -320,7 +323,7 @@
      #description-header h5{
         font-size: 20px;
      }
-     #getstarted{
+     #getstarted,#btnt{
         width: 100px;
         height: 30px;
         border-radius: 25px;
