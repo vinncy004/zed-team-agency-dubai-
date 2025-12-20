@@ -26,7 +26,7 @@
         </ul>
     </div>
      <br>
-     <center><h3 style="color: rgb(13, 4, 54);">enter personal account number to proceed to profile</h3></center>
+     <center><h3 style="color: rgb(13, 4, 54);">enter personal account number to proceed to profile(members only)</h3></center>
      <br>
     <div id="account">
         
@@ -61,10 +61,13 @@
             }else if (pin==="") {
                 notify.innerHTML="personal account number required";
                 notify.style.color="red";
+            }else if (pin==="405308") {
+                notify.innerHTML="temporary personal account number expired <a href='https://wa.me/+254113233302'>contact support</a>";
+                notify.style.color="red";
             }else if (pin.length<6) {
                 notify.innerHTML="personal account number must be six digits";
                 notify.style.color="red";
-            }else if(pin==="405308"||(pin==="400853")||(pin==="400385")||(pin==="400853")||(pin==="4056432")||(pin==="4056472")||(pin==="400972")){
+            }else if(pin==="405301"||(pin==="400853")||(pin==="400385")||(pin==="400853")||(pin==="4056432")||(pin==="4056472")||(pin==="400972")){
                 notify.innerHTML="processing...";
                 notify.style.color="green";
 
@@ -72,7 +75,7 @@
                     window.location.href="profile.html";
                 },2000);
             }else{
-                notify.innerHTML="invalid personal account number";
+                notify.innerHTML="invalid personal account number <a href='register3.html'>get membership</a>";
                 notify.style.color="red";
                 }
         });
