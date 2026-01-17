@@ -5,41 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
     <style>
-      
+   
     @media (width<769px){
        *{
         padding: 0;
         margin: 0;
        }
        body{
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(224, 224, 224) ;
         color: black;
-       } /*styling for signup and login pages*/
+       } 
+       /*styling for signup and login pages*/
  form{
-    margin-top: 5vh;
+    margin-top: 10vh;
     width: 90vw;
-    margin-left:15px;
-    border: 1px solid rgb(184, 70, 70);
-    box-shadow: 1px 2px 1px blue;
+    margin-left:20px;
+    border: 1px solid rgb(202, 203, 211);
+    background: rgb(245, 239, 239);
+    border-radius: 5px;
+   
+ }
+ #logoimage{
+        width: 60%;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 20%;       
+       } 
+       #description{
+        font-size: 19px;
+        align-content: center;
+        justify-content: center;
+       }
+ label{
+    margin-left: 15px;
+ }
+ #description{
+    display: flex;
+    justify-content: center;
  }
  input{
-    margin-left: 5px;
+    margin-left: 7px;
     width: 80vw;
     height: 30px;height: 30px;
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 2px solid black;
-    background-color: transparent;
-     
+    background-color:transparent;
+     color: black;
  }
-  #opt{
-        color: red;
-    }
  #registerbtn{
      width: 80vw;
     height: 30px;
-    background-color: rgb(202, 76, 44);
+    background-color: rgb(17, 3, 97);
     color: azure;
     margin-left: 5px;
     border-radius: 25px;
@@ -106,7 +124,33 @@
     font-size: 20px;
     font-weight: bolder;
 
- }}
+ }
+  #icon{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+     .icon{
+        width: 35px;
+        height: 35px;
+      
+ }
+ #footer{
+    background-color: transparent;;
+    margin-top: 10vh;
+   
+}
+#footer li{
+ list-style-type: none;
+}
+#footer ul{
+   display: flex;
+    justify-content:space-evenly;
+
+ 
+}
+
+}
 
       @media  (width>768px){
           *{
@@ -116,9 +160,10 @@
        body{
         background-color: rgb(255, 255, 255);
         color: black;
-       } /*styling for signup and login pages*/
+       }
+       /*styling for signup and login pages*/
  form{
-    margin-top: 2vh;
+    margin-top: 10vh;
     width: 30vw;
     margin-left: 40vw;
     border: 1px solid rgb(184, 70, 70);
@@ -187,9 +232,6 @@
         color: black;
         font-size: 25px;
     }
-     #opt{
-        color: red;
-    }
      #notify{
     position:absolute;
     top: 0;
@@ -204,110 +246,82 @@
     display:none ;
     font-size: 20px;
     font-weight: bolder;
-   
 
       }}
 
     </style>
 </head>
 <body>
-     <h5><center>personal details</center></h5>
-       <span id="notify"></span>
-    <form action="" method="get">
+  
+    <script src="index.js"></script>
+    <div id="logo"><img id="logoimage" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt=""></div>
+    <p id="description">personal details</p>
+    <form action="" method="post">
         
             <br>
-            <label for="names">enter full names:</label>
-            <br><br>
-            <input type="text" name="number" id="name" placeholder="full names (e.g john doe)">
-            <br><br>
-            <label for="phone">enter phone number:</label>
-            <br><br>
-            <input type="number" name="number" id="phone" placeholder="phonenumber" required>
+          
+            <label for="phone">full names:</label>
+            <br>            <br>
+            <input type="text" name="names" id="names" placeholder="your full names" maxlength="100" minlength="10" required>
             <br>
              <span id="validphone"></span>
             <br>
-            <label for="phone">enter phone number of next of kin :</label>
+            <label for="phone">phone number:</label>
             <br><br>
-           <input type="number" name="number" id="phone" placeholder="phonenumber" required>
+            <input type="number"  id="phone" placeholder="format 2541**, 2547**,07**,01** " maxlength="13" minlength="10" required>
             <br><br>
-            <label for="phone">your county :</label>
+             <label for="passport">passport number</label>
             <br><br>
-          <input type="text" name="" id="county">
-            
-            <br><br>
-            <label for="phone">your sub-county :</label>
-            <br><br>
-          <input type="text" name="" id="county">
-            <br><br>
-            <label for="health">upload picture showing passport number<span id="opt">(optional)</span></label>
-            <br><br>
-            <input type="file" name="passport image" id="upload" placeholder="upload file img">
-           
+            <input type="text" placeholder="passportnumber e.g Bk23.." required>
             <br>
-             <br>
-            <label for="health">upload certificate of goodconduct <span id="opt">(pdf or image)</span></label>
+            <span id="valid"></span>
+            <br>
+            <label for="passport image">passport booklet image</label>
             <br><br>
-            <input type="file" name="goodconduct" id="upload" placeholder="upload file img">
-           
-            <br>
-          
-            <br>
-            <span id="login">
-                <button onclick="valid()" id="registerbtn">proceed</button>
-            </span><br><br>
+            <input type="file" name="psp" id="passport" upload>
+
+            <span id="pass-success"></span><br>
+            <br><br>
+
+            <span id="reg">
+                <button type="submit" id="registerbtn" onclick="valid()">register</button> 
+            </span>
+            <br><br>
        
     </form>
-    <script>
-      /*
-
-       let submits=document.getElementById("registerbtn");
-        submits.addEventListener("click",function(){
-            let phonenumber=document.getElementById("name").value;
-            let pin=document.getElementById("phone").value;
-            let pin2=document.getElementById("county").value;
-            let notify=document.getElementById("notify");
-
-            if (phonenumber==="") {
-                notify.innerHTML="name required";
-                notify.style.color="red";
-            }else if (pin==="") {
-                notify.innerHTML="personal phone number required";
-                notify.style.color="red";
-            }else if (pin.length<11) {
-                notify.innerHTML="personal number number must be 10 digits";
-                notify.style.color="red";
-            }else {
-                notify.innerHTML="processing...";
-                notify.style.color="green";
-                setTimeout(function(){
-                    window.location.href="register3.html";
-                },2000);
-            }
-        });*/
-
-
-       function valid(){
-    let a=document.getElementById('name').value;
-    let b=document.getElementById('phone').value;
-     let d=document.getElementById('login');
-    let c=document.getElementById('registerbtn')
-    let e=document.getElementById('notify');
-    let f=document.getElementById('notis');
-    
-    //<button id="registerbtn"><a href="register3.html"   id="alink">next </a></button>
-  if((a&&b)!=''){
-    e.style.display='flex';
-      e.innerHTML=`<center><p>information recorded,proceed to membership</p></center>`
-   d.innerHTML=`<a href="register3.html"><button onclick="valid()" id='registerbtn'>proceed</button></a>`
+     <div id="footer">
    
-  }else {
-      e.style.display='flex';
-      e.style.backgroundColor="red";
-     e.innerHTML=`<center><p>empty fields cant be submitted</p></center>`
-      f.innerText="check on empty fields"
-       d.innerHTML=`<button onclick="valid()" id='registerbtn'>proceed</button>`
-  }
-        }
-    </script>
+  
+    <ul>
+         
+        <li> <a href="https://www.facebook.com/profile.php?id=61584729249254"><img id="icon"src="data:image/png;base64,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" alt="" srcset=""></a></li>
+        <li> <a href="ig"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="" srcset=""></a></li>
+        <li> <a href="https://x.com/_mbwax?t=1EY-957jq-8b4GDlzlBXBQ&s=09"><img id="icon" src="https://cdn-icons-png.flaticon.com/128/5968/5968830.png" alt="" srcset=""></a></li>
+        <li> <a href="ln"><img id="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEUAd7f///8AbLIAc7UAcLRxn8qwzOLb6fP6/P0AbrO90+ZIjsKZu9kAdba2zeOiwNwAaLDx9vqArNHm7/YRfLoAZa+KstRQksQwgLvP3exsoszG2emSttawxt9Ghr5jmchWjsJT5yLzAAAEeklEQVR4nO2c24KqOgyGewhKy0EOclBnwPd/yoXLcUQhtW5mSPfe/edibgA/SknSNITxL5W6jvaMTPum0OWNhV3/5XUrIEnooJIEVFvkY6hNBXQ8d6ksvUPVihrnJlXfoOqMmuWu6uMKlQpqkrFUeoHKHRqni7J8gCqcmON3qYKzsqWmeFZbMu3UjLpIaeba02MMahYRmvF5yYbtnYNihC74vyUJAiQokO48Y8ii+lPrNP1ohHADC9r6O+ri+a4DeixZxXekv1ifQG3RoNvyZ+U9LRV0+YSJ8zCgdEmymWMaqCh9kihnmQaqvaRiAo0wcb5lRO+gbFAmThYSVtMXbyQaK5p0JiZ+JBkq9WmEOlCsEZPkYIQiiemTFrMHV4U9gVVIutAIxQMKqLOZicQouAnl4uNjTk705GSEKjsKk652RigS48lkZIQi8siZ2SGTMDEZGJh2VBGxNAR5LdVCSzLUVDV0QTr0CFVNuZxR/TwTbb4dmpnF6JE6Ewls88R0ODuwL6FYOkpwHCJBtuQbKxFtEJ+25fa0C87KCaSLEgkiyzKhHEqaeXklIIZ5CYOGySmW5SglTCVfH/L4owko0R7j9HDYDjocdHzcL0g1iz5On7UL1PhyEE0PSePuTi5FV+iJE83TovtnJg+KWY+8Gdl0xGnnzRe4VM1pPh/IS909j7qFZINECaNYeI/94nWjVfTG9cfp/LYfRdcOp++hkgEWc13CQCl3L1aPeazenFri2RnftP2+PxwqkgxaY5j/dYNv5k8XQkGEPNpH5e9RLYOyZBqo2neolkFhr8BU5TuxxxKosDMv+x+k14LCzp3VGyuRRY/vLYX25VHrQfHUOvBfESrsbKfVilA8ta3/WRMqtE0ErAnFY0uqVaFOli/gqlChZRJ1VSjbHPi6UNru/fsZqHwT9H0fFK98oWVR4E9AHfpKyGT4g6yqjfsFoV0E8wNQsRy96aI1jpbdpFoMFQbV4wIwM+0Y7Kz832KoaR4SDPutn1bmcynUpppcUs4Wqlx1sjJUC6HyuWQ7es3hqlZ1gQuh4rk5krTo8XZ75cug8vnSE3xW5VaOZhkUEiHBB3YCP/8+FLJ1KrFtDM4bG0O1CGp2mjNjwcPvQ52waiZAofpff3yfmH3GNzet9soXQdWYfRboNuLx16HQ28bNp1X509L8FHJV1ClbbZb/n6BiF6FQk26147r245v14B7KQ3koD+WhPJSH8lAeykN5KA/loTyUh/JQHspDeagXQksq7x9iGaCw7QM85/lhk/PEi09Ho4BsapRo7Rj+kZddxxSYvyk9qkWG4+whYYDfNSCzYmdZgpMdU/2stMjGd6SazeQQnXaGH0jEcXqG1vYND0DJZz13lpAwOUS+KFSGuVOoG1b8u+Xe1yd7FxsYRS62eiqYW23WLhKalc41VmpLNxut8bxya6r/bUnHN04N1bV53+D7HWrfV12aL14bQjrzBsJ3Q8hLIY8D34MOSNU1uLk1GS32grZJWAJi/9hk9BIx6oK0HWs0asf6B1nCVE6ttwwGAAAAAElFTkSuQmCC" alt="" srcset=""></a></li>
+    </ul>
+   
+    
+   </div>
+    <script>
+      function valid(){
+          
+          let c=  document.getElementById('pass-success');
+           let d=  document.getElementById('reg');
+
+         if((a===b)&&(a&&b!='')){
+
+            
+            c.style.display='inline'
+            
+            c.innerHTML=`<p style="color:green;">success proceed to register</p>`
+           
+            d.innerHTML=`<button id="registerbtn" onclick='valid()' ><a  href="register1.html" id="alink">register</a></button>`
+            
+          
+             
+          }
+       
+      }    
+      </script>
 </body>
 </html>
