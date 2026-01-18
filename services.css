@@ -20,7 +20,7 @@
     #header{
         width: 100vw;
         height: 40px;
-        background-color: transparent;
+        background-color:rgb(230, 226, 226);
     }
     #header ul{
         display: flex;
@@ -38,9 +38,9 @@
         height: 35px;
         border-radius: 50%;
     }
-   #logo{
-    width: 60px;
-    height: 60px;
+   #logo,#menubar{
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
    }
     #nav-bar{
@@ -281,6 +281,61 @@ table{
     background-color: rgb(255, 255, 255);
     border: 1px solid grey;
 }
+#joblist{
+    height: 10vh;
+    width: 99vw;
+    border-top: 1px solid rgb(49, 49, 49);
+    border-bottom: 1px solid rgb(49, 49, 49);
+    display: block;
+
+
+}
+#explore{
+    width: 30vw;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(15, 15, 155);
+    color: white;
+    &:hover{
+        background-color: rgb(241, 120, 6);
+    color: rgb(7, 7, 7);
+    }
+}
+#joblist li{
+    display: inline-block;
+    gap: 5px;
+    margin-top: 1px;
+    text-transform: capitalize;
+}
+.box{
+    width: 5%;
+    height: 30px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.descript{
+    width:80% ;
+    height: fit-content;
+    font-size: 15px;
+    margin-top: 1px;
+}
+.bookmark{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 1pxs;
+
+}
+.bkimg{
+     width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
 
 }
 
@@ -325,6 +380,17 @@ table{
         }
       
     }
+    #explore{
+    width: 30vw;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(15, 15, 155);
+    color: white;
+    &:hover{
+        background-color: rgb(241, 120, 6);
+    color: rgb(7, 7, 7);
+    }
+}
     #header{
         display: none;
     }
@@ -519,7 +585,76 @@ cursor: pointer;
     color: black;
     text-align: left;
 }
-
-
+#ulist{
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+    width: 50px;
+    height: 50px;
+}
+#notification-btn{
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    border-radius: ;
+}
+#notification-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    justify-content: space-around;
+}
+#search{
+    width: 80vw;
+    height: 30px;
+    border-radius: 25px;
+    margin-left: 10vw;
+}
+#percentage{
+    width: 40vw;
+    height: 20px;
+    border-radius: 25px;
+    margin-left: 30vw;
+}
+ul li{
+    list-style-type: none;
+}
+#job{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+#joblist{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+}
+.box{
+    width:20vw ;
+    height: 10%;
+    background-color: rgb(255, 60, 0);
+    color: white;
+}
+.descrip{
+    width:20vw;
+    height:30vh;
+    background-color: rgb(209, 212, 214);
+}
+.bookmark{
+    width: 20vw;
+    height: 10%;
+    background-color: blue;
+}
+button{
+    width: 20vw;
+    height: 40px;
+    background-color: rgb(15, 15, 131);
+    color: white;
 }
 
+.bkimg{
+     width: 20vw;
+    height: 40px;
+    display: none;
+}}
