@@ -30,6 +30,8 @@
   #description{
          display: flex;
          justify-content: center;
+         text-transform: capitalize;
+         font-size: 20px;
  }       
  label{
     margin-left: 15px;
@@ -151,6 +153,9 @@
     margin-left: 2px;
 }
 
+#logoimg{
+    display: none;
+}
 }
 
       @media  (width>768px){
@@ -162,33 +167,9 @@
         background-color: rgb(255, 255, 255);
         color: black;
        }
+
        /*styling for signup and login pages*/
- form{
-    margin-top: 10vh;
-    width: 30vw;
-    margin-left: 40vw;
-    border: 1px solid rgb(184, 70, 70);
-    box-shadow: 1px 2px 1px blue;
- }
- input{
-    margin-left: 20px;
-    width: 20vw;
-    height: 30px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid black;
-    background-color: transparent;
-     
- }
- #registerbtn{
-     width: 15vw;
-    height: 30px;
-    background-color: rgb(202, 76, 44);
-    color: azure;
-    margin-left: 70px;
-    border-radius: 25px;
- }
+
 #alink{
     text-decoration: none;
     font-size: 20px;
@@ -248,7 +229,76 @@
     font-size: 20px;
     font-weight: bolder;
 
-      }}
+   
+      }
+       #form,#logo,#description,#logoimage{
+         display: none;
+       }
+       #footer{
+        display: none;
+      }
+      #logoimg{
+        width: 70vw;
+        height: 80vh;
+        background-color: rgb(220, 220, 224);
+        margin:5% 10%;
+      }
+      #logoimg ul{
+        display: grid;
+       grid-template-columns: 40vw 2fr;
+       gap: 5px;
+
+      }
+      #logoimg ul li{
+        list-style-type: none;
+      }
+      
+       #logoim{
+        width: 35vw;
+        height: 80vh;
+       }
+      #logoimg form{
+        width: 25vw;
+        height: 55vh;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: transparent;
+        border: none;
+       }
+       label,p{
+        font-size: 15px;
+        font-family: sans-serif;
+       }
+      input{
+        
+        width:25vw;
+        height: 40px;
+         border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid grey;
+        background-color: transparent;
+        &&::placeholder{
+            color: grey;
+        }
+      }
+      #check{
+        width: 15px;
+        height: 15px;
+      }
+      #registerbtn{
+        width: 25vw;
+        height: 30px;
+        color: white;
+        background-color: rgb(17, 17, 134);
+        border-radius: 5px;
+      }
+
+
+      
+
+    }
+     
 
     </style>
 </head>
@@ -257,10 +307,12 @@
     <script src="index.js"></script>
     <div id="logo"><img id="logoimage" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt=""></div>
     <p id="description">zed team agency dubai</p>
-    <form action="" method="post">
+    
+    <form action="" method="post" id="form">
         
             <br>
-          
+             <center><p id="welcome">welcome zed team agency dubai</p></center>
+          <br>
             
             <label for="email">enter email :</label>
             <br><br>
@@ -269,24 +321,69 @@
              
             <label for="passwpord">enter password:</label>
             <br><br>
-            <input type="password"  id="pass1" placeholder="enter your password"  required>
+            <input type="password"  id="pass" placeholder="enter your password"  required>
       
             <br>
             <span id="pass-success"></span><br>
             <br>
             <input type="checkbox" name="" id="check" checked>by login in means you accept our <a href="term.html">T&C</a>
-            <br><br><br>
+            <br>
+            <span id="location" style="color:blue;"></span><br><br>
 
             <span id="reg"> 
-                <button type="submit" id="registerbtn" onclick="valid()">sign in</button>
+                <button  id="registerbtn" onclick="valid()">sign in</button>
             </span>
             <br><br>
             Don't have an account? <a href="register1.html">sign up </a>
             <br><br><br>
 
-            
+           
        
     </form>
+     
+    <div id="logoimg">
+  
+     <ul>
+        <li>
+            <img id="logoim" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt="">
+        </li>
+        <li>
+             
+    <form action="" method="post" >
+            <br>
+            <span id="location"></span>
+            <br>
+            <label for="email">enter email :</label>
+            <br><br>
+            <input type="email"  id="email" placeholder="enter email e.g (abc@gmail.com)"  required>
+            <br><br>
+             
+            <label for="passwpord">enter password:</label>
+            <br><br>
+            <input type="password"  id="pass" placeholder="enter your password"  required>
+      
+            <br><br>
+            <span id="pass-success"></span><br>
+            <br>
+            <input type="checkbox" name="" id="check" checked>by login in means you accept our <a href="term.html">T&C</a>
+            <br>
+            <span id="location" style="color:blue;"></span>
+            <br><br>
+
+            <span id="reg"> 
+                <button  id="registerbtn" onclick="valid()">sign in</button>
+            </span>
+            <br><br>
+            Don't have an account? <a href="register1.html">sign up </a>
+            <br><br><br>
+
+           
+       
+    </form>
+        </li>
+     </ul>
+   </div>
+   <script src="index.js"></script>
     <div id="footer">
    
   
@@ -300,22 +397,36 @@
    
     
    </div>
-    <script>
-      function valid(){
-          let a= document.getElementById('pass1').value;
-          let b=  document.getElementById('email').value;
-          let c=  document.getElementById('pass-success');
-           let d=  document.getElementById('registerbtn');
+ <script>
+          
+   function valid(){
+           let a=  document.getElementById('pass').value;
+           let b=  document.getElementById('email').value;
+           let c=  document.getElementById('pass-success');
+           let d=  document.getElementById('reg');
 
-         if(a&&b===""){
-            c.innerHTML=`<p style="color:red;>please fill all the fields</p>`
-         }else if(b<7){
-            c.innerHTML=`<p style="color:red;>incorrect password</p>`
-         }else{
-            c.innerHTML=`<p style="color:greenn;>successfully logged  in</p>`
-            d.innerHTML=`<a href="index1.html"><button type="submit" id="registerbtn" onclick="valid()">sign in</button></a>` 
-         }
-      </script>
+         if(a&&b!="" ){
+            c.style.display='inline'
+            c.innerHTML=`<p style="color:green;">successful  you can now proceed.. </p>`
+           d.innerHTML=`<button id="registerbtn" onclick='valid()' ><a  href="copy.html" id="alink">sign in</a></button>`
+          }else if(a<7) {
+               c.style.display='inline'
+            c.innerHTML=`<p style="color:red;">failed! check username and password or signup </p>`
+            d.innerHTML=`<a  href="#" id="alink"> <button  id="registerbtn" onclick="valid()">sign in</button></a>`
+          }else if(a||b==""){
+               c.style.display='inline'
+            c.innerHTML=`<p style="color:red;">failed!all fields are required </p>`
+            d.innerHTML=`<a  href="#" id="alink"> <button  id="registerbtn" onclick="valid()">sign in</button></a>`
+          }
+          location();
+          }
+          function location(){
+           document.getElementById('location').innerHTML=`logged in from kenya`
+           
+          }
+          
+</script>
+
       
 </body>
 </html>
