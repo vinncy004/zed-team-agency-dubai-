@@ -272,7 +272,7 @@
             <br><br>
              <label for="passport">passport number</label>
             <br><br>
-            <input type="text" placeholder="passportnumber e.g Bk23.." required>
+            <input type="text" placeholder="passportnumber e.g Bk23.." id="passno" required>
             <br>
             <span id="valid"></span>
             <br>
@@ -307,11 +307,12 @@
    </div>
     <script>
       function valid(){
-          
+          let a= document.getElementById('phone');
+          let b= document.getElementById('passno');
           let c=  document.getElementById('pass-success');
            let d=  document.getElementById('reg');
 
-         if((a===b)&&(a&&b!='')){
+         if(a&&b!=""){
 
             
             c.style.display='inline'
@@ -319,9 +320,9 @@
             c.innerHTML=`<p style="color:green;">information recorded successfully proceed</p>`
            
             d.innerHTML=`<button id="registerbtn" onclick='valid()' ><a  href="account.html" id="alink">register</a></button>`
-            
-          
-             
+           
+          }else{
+            c.innerHTML=`<p style="color:red;">all fields required</p>`
           }
        
       }   
