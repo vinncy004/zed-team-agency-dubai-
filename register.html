@@ -144,6 +144,9 @@
 
  
 }
+#laptop{
+    display: none;
+}
 
 }
 
@@ -157,37 +160,7 @@
         color: black;
        }
        /*styling for signup and login pages*/
- form{
-    margin-top: 10vh;
-    width: 30vw;
-    margin-left: 40vw;
-    border: 1px solid rgb(184, 70, 70);
-    box-shadow: 1px 2px 1px blue;
- }
- input{
-    margin-left: 20px;
-    width: 20vw;
-    height: 30px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid black;
-    background-color: transparent;
-     
- }
- #registerbtn{
-     width: 15vw;
-    height: 30px;
-    background-color: rgb(202, 76, 44);
-    color: azure;
-    margin-left: 70px;
-    border-radius: 25px;
- }
-#alink{
-    text-decoration: none;
-    font-size: 20px;
-    color: azure;
- }
+ 
 
  #tc{
     width:20px;
@@ -242,14 +215,82 @@
     font-size: 20px;
     font-weight: bolder;
 
-      }}
+      }
+     
+      #phone{
+        display: none;
+      }
+        #footer{
+        display: none;
+      }
+      #logoimg{
+        width: 70vw;
+        height: 80vh;
+        background-color: rgb(220, 220, 224);
+        margin:5% 10%;
+      }
+      #logoimg ul{
+        display: grid;
+       grid-template-columns: 40vw 2fr;
+       gap: 5px;
+
+      }
+      #logoimg ul li{
+        list-style-type: none;
+      }
+      #logoim{
+        width: 30vw;
+        height: 80vh;
+       }
+       
+      #logoimg form{
+        width: 25vw;
+        height: 55vh;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: transparent;
+        border: none;
+       }
+       label,p{
+        font-size: 15px;
+        font-family: sans-serif;
+       }
+      input{
+        
+        width:25vw;
+        height: 40px;
+         border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid grey;
+        background-color: transparent;
+        &&::placeholder{
+            color: grey;
+        }
+      }
+      #check{
+        width: 15px;
+        height: 15px;
+      }
+      #registerbtn{
+        width: 25vw;
+        height: 30px;
+        color: white;
+        background-color: rgb(17, 17, 134);
+        border-radius: 5px;
+      }
+
+
+    
+    }
 
     </style>
 </head>
 <body>
   
     <script src="index.js"></script>
-    <div id="logo"><img id="logoimage" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt=""></div>
+    <div id="phone">
+        <div id="logo"><img id="logoimage" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt=""></div>
     <p id="description">zed team agency dubai</p>
     <form action="" method="post">
         
@@ -285,6 +326,43 @@
             
        
     </form>
+    </div>
+    <div id="logoimg">
+        <ul>
+            <li><img id="logoim" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt=""></li>
+            <li>
+            <form action="" method="post">
+                <br>
+            <label for="email">enter email :</label>
+            <br><br>
+            <input type="email"  id="email" placeholder="enter email e.g (abc@gmail.com)"  required>
+            <br><br>
+             
+            <label for="passwpord">enter password:</label>
+            <br><br>
+            <input type="password"  id="pass1" placeholder="enter strong password"  required>
+            <br><br>
+           
+            <label for="passwpord">repeat password:</label>
+            <br><br>
+            <input type="password"  id="pass2" placeholder="repeat password"  required>
+            <br>
+            <span id="pass-success"></span><br>
+
+            <span id="reg">
+                <button type="submit" id="registerbtn" onclick="valid()">register</button> 
+            </span>
+            <br><br>
+
+            
+       
+    </form>
+            </li>
+        </ul>
+        
+   
+    
+    </div>
     <div id="footer">
    
   
@@ -324,7 +402,7 @@
             
             c.innerHTML=`<p style="color:green;">success proceed to register</p>`
            
-            d.innerHTML=`<button id="registerbtn" onclick='valid()' ><a  href="register1.html" id="alink">register</a></button>`
+            d.innerHTML=`<button id="registerbtn" onclick='valid()' ><a  href="index.html" id="alink">sign up</a></button>`
             
           
              
