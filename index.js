@@ -10,7 +10,9 @@
         b.style.display="none"
     })
     const year=new Date().getFullYear();
+     const det=new Date().toLocaleDateString();
     document.getElementById('year').textContent=`${year}`;
+     document.getElementById('dates').textContent=`${det}`;
      document.getElementById('years').textContent=`${year}`;
 
 const testimonials = document.querySelectorAll('.testimonial');
@@ -42,6 +44,10 @@ setInterval(showNextTestimonial, 3000);
                     message.value='';
                 }
             });
+         
+         
+
+            
 
 
 // change every 4 seconds
