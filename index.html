@@ -342,7 +342,7 @@
     </form>
      
     <div id="logoimg">
-  
+        <script src="index.js"></script>
      <ul>
         <li>
             <img id="logoim" src="img/ChatGPT Image Jan 17, 2026, 12_13_47 AM.png" alt="">
@@ -405,7 +405,7 @@
            let c=  document.getElementById('pass-success');
            let d=  document.getElementById('reg');
 
-         if(a&&b!="" ){
+         if(a&&b!=''){
             c.style.display='inline'
             c.innerHTML=`<p style="color:green;">successful  you can now proceed.. </p>`
            d.innerHTML=`<button id="registerbtn" onclick='valid()' ><a  href="copy.html" id="alink">sign in</a></button>`
@@ -418,13 +418,9 @@
             c.innerHTML=`<p style="color:red;">failed!all fields are required </p>`
             d.innerHTML=`<a  href="#" id="alink"> <button  id="registerbtn" onclick="valid()">sign in</button></a>`
           }
-          location();
-          }
-          function location(){
-           document.getElementById('location').innerHTML=`logged in from kenya`
-           
-          }
           
+          }
+        
 </script>
 
       
