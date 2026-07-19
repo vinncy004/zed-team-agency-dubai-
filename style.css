@@ -9,12 +9,12 @@
         background-size: 110vw 110vh;
         color: black;
         text-align: center;
-        display: none;
+       
       
 
     }
     #btnt{
-        display: none;
+        display: ;
     }
     #notify-img{
         width: 20px;
@@ -22,7 +22,7 @@
         border-radius: 50%;
     }
     #notification{
-        display:none ;
+        display: ;
         width: 80vw;
         height: 20vh;
         margin-top: 40vh;
